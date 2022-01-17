@@ -1,9 +1,3 @@
-
-<?php 
-include("dataconfig.php");
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -60,13 +54,6 @@ include("dataconfig.php");
             </li>
             <li class="nav-item border rounded-pill border-warning float-left">
               <a class="nav-link" href="login.php">Login→</a>
-            </li>
-            <li class="nav-item float-left">
-              <a class="nav-link" href="patient.php">
-                <?php 
-                 echo isset($_SESSION['username'])?$_SESSION['username']:"";
-                ?>  
-              </a>
             </li>
           </ul>
         </div>
