@@ -55,6 +55,9 @@ include("dataconfig.php");
             <li class="nav-item">
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
+			      <li class="nav-item">
+              <a class="nav-link" href="product.php">Shop</a>
+            </li>
             <li class="nav-item border rounded-pill border-warning float-left mr-2">
               <a class="nav-link" href="register.php">Register</a>
             </li>
@@ -67,6 +70,7 @@ include("dataconfig.php");
                  echo isset($_SESSION['username'])?$_SESSION['username']:"";
                 ?>  
               </a>
+            </li>
             </li>
           </ul>
         </div>
