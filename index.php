@@ -1,9 +1,3 @@
-
-<?php 
-include("dataconfig.php");
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -55,7 +49,7 @@ include("dataconfig.php");
             <li class="nav-item">
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
-			<li class="nav-item">
+			      <li class="nav-item">
               <a class="nav-link" href="product.php">Shop</a>
             </li>
             <li class="nav-item border rounded-pill border-warning float-left mr-2">
@@ -71,7 +65,6 @@ include("dataconfig.php");
                 ?>  
               </a>
             </li>
-			
             </li>
           </ul>
         </div>
