@@ -1,3 +1,40 @@
+<?php
+include('dataconfig.php');
+if(isset($_POST['Cases']) && isset($_POST['Recovered']) && isset($_POST['Deaths']))
+{
+	$cases =  $_POST['Cases'];
+	$recovered = $_POST['Recovered'];
+	$deaths = $_POST['Deaths'];
+
+	$sql = "INSERT INTO info_world (cases,recovered,deaths) 
+	VALUES ('$cases','$recovered','$deaths')";
+	mysqli_query($conn,$sql);
+}
+
+else if(isset($_POST['Cases_bd']) && isset($_POST['Recovered_bd']) && isset($_POST['Deaths_bd']))
+{
+	$cases =  $_POST['Cases_bd'];
+	$recovered = $_POST['Recovered_bd'];
+	$deaths = $_POST['Deaths_bd'];
+
+	$sql = "INSERT INTO info_bd (cases,recovered,deaths) 
+	VALUES ('$cases','$recovered','$deaths')";
+	mysqli_query($conn,$sql);
+}
+
+else if(isset($_POST['wash_hand']) && isset($_POST['use_mask']) && isset($_POST['use_sanaitizer']) && isset($_POST['avoid_handshake']) && isset($_POST['avoid_touch']) && isset($_POST['doctor_appointment'])){
+	$wash_hand=$_POST['wash_hand'];
+	$use_mask=$_POST['use_mask'];
+	$use_sanaitizer=$_POST['use_sanaitizer'];
+	$avoid_handshake=$_POST['avoid_handshake'];
+	$avoid_touch=$_POST['avoid_touch'];
+	$doctor_appointment=$_POST['doctor_appointment'];
+
+	$sql="INSERT INTO prevents (WASH_HAND,USE_MASK,USE_SANITIZER,AVOID_HANDSHAKE,AVOID_TOUCH,D_APPOINTMENT) VALUES ('$wash_hand','$use_mask','$use_sanaitizer','$avoid_handshake','$avoid_touch','$doctor_appointment')";
+	mysqli_query($conn,$sql);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

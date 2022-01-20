@@ -1,3 +1,32 @@
+<?php
+  include('dataconfig.php');
+
+  $sql_w = "SELECT * FROM info_world ORDER BY id DESC LIMIT 1";
+
+  $sql_bd = "SELECT * FROM info_bd ORDER BY id DESC LIMIT 1";
+
+  $sql_prevn = "SELECT * FROM prevents ORDER BY id DESC LIMIT 1";
+
+  $result_w = mysqli_query($conn,$sql_w);
+
+  $result_bd = mysqli_query($conn,$sql_bd);
+
+  if($result_w)
+  {
+    $data = mysqli_fetch_assoc($result_w);
+    $cases_world = $data['cases'];
+    $recovered_world = $data['recovered'];
+    $deaths_world = $data['deaths'];
+  }
+
+  if($result_bd)
+  {
+    $data = mysqli_fetch_assoc($result_bd);
+    $cases_bd = $data['cases'];
+    $recovered_bd = $data['recovered'];
+    $deaths_bd = $data['deaths'];
+  }  
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -97,31 +126,62 @@
     </div>
   </section>
   <!-- banner end -->
-  <!-- counter start -->
+  <!-- counter start for whole world-->
   <section id="counter">
     <div class="container">
+      <div class="row symptoms_text offset-md-3">
+        <h1>Total cases of Whole World</h1>
+      </div>
       <div class="row text-center">
         <div class="col counter">
           <div class=" c_border">
-            <h2 class="timer count-title count-number" data-to="72106141" data-speed="7000"></h2>
+            <h2 class="timer count-title count-number" data-to=<?php echo $cases_world; ?>></h2>
             <p class="count-text ">Total Confirmed</p>
           </div>
         </div>
         <div class="col counter">
          <div class=" c_border">
-          <h2 class="timer count-title count-number" data-to="50490465" data-speed="7000"></h2>
+          <h2 class="timer count-title count-number" data-to=<?php echo $recovered_world; ?>></h2>
           <p class="count-text ">Total Recoverd</p>
         </div>
       </div>
       <div class="col counter">
         <div class=" c_border">
-          <h2 class="timer count-title count-number" data-to="1611565" data-speed="7000"></h2>
+          <h2 class="timer count-title count-number" data-to=<?php echo $deaths_world; ?>></h2>
           <p class="count-text ">Total Death</p>
         </div></div>
       </div>
     </div>
   </section>
-  <!-- counter end -->
+  <!-- counter end for whole world-->
+  <!-- counter start for Bangladesh-->
+  <section id="counter">
+    <div class="container">
+      <div class="row symptoms_text offset-md-3">
+        <h1>Total cases of Bangladesh</h1>
+      </div>
+      <div class="row text-center">
+        <div class="col counter">
+          <div class=" c_border">
+            <h2 class="timer count-title count-number" data-to=<?php echo $cases_bd; ?>></h2>
+            <p class="count-text ">Total Confirmed</p>
+          </div>
+        </div>
+        <div class="col counter">
+         <div class=" c_border">
+          <h2 class="timer count-title count-number" data-to=<?php echo $recovered_bd; ?>></h2>
+          <p class="count-text ">Total Recoverd</p>
+        </div>
+      </div>
+      <div class="col counter">
+        <div class=" c_border">
+          <h2 class="timer count-title count-number" data-to=<?php echo $deaths_bd; ?>></h2>
+          <p class="count-text ">Total Death</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  <!-- counter end for Bangladesh-->
   <!-- about start -->
   <section class="about" id="about">
     <div class="container">
