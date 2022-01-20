@@ -1,3 +1,41 @@
+<?php
+session_start();
+if (isset($_SESSION['auth'])) {
+	if ($_SESSION['auth']!=1) {
+		header("location:login.php");
+	}
+}else{
+	if (isset($_COOKIE['auth2'])) {
+		if ($_COOKIE['auth2']!=true) {
+			header("location:login.php"); 
+		}
+
+	}else {
+		header("location:login.php");
+	}
+}
+?>
+<?php 
+include("dataconfig.php");
+$p_name=isset($_SESSION['username'])?$_SESSION['username']:"";
+$d_name=isset($_SESSION['username'])?$_SESSION['username']:"";
+
+$selectsql2="SELECT * FROM visit";
+
+$conn->query($selectsql2);
+$result_info=$conn->query($selectsql2);
+
+$conn->query($selectsql2);
+$result_info2=$conn->query($selectsql2);
+
+//total count start
+$c=400;
+$a=150;
+$v=500;
+$sum=0;
+$re=0;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +98,32 @@
 			<div class="col-md-12">
 				<h1 class="offset-lg-3 col-lg-6 offset-md-3 col-md-8 text-center meet_title custom_h1">Information</h1>
 			</div>
-			
+			<?php while ($info=$result_info->fetch_assoc()) {?>
+				<?php if ($p_name==$info['D_NAME']) { ?>
+			<div class="col-md-3 offset-1 mb-3  meet_content text-center c_padding">
+				<h3 class="custom_h3">Patient Name:</h3>
+				<p class="custom_p"><?php echo $info['P_NAME'];?></p>
+				<h5 class="custom_h3">Service Type:</h5>
+				<p class="custom_p"><?php echo $info['S_TYPE'];?></p>
+				<h5 class="custom_h3">Cost</h5>
+				<p class="custom_p">
+					<?php
+					$var=$info['S_TYPE'];
+					if($var=='Corona Test'){
+						$re=$c;
+					}
+					else if($var=='Antibody Test'){
+						$re=$a;
+					}
+					else if($var=='Vaccine Push'){
+						$re=$v;
+					}
+					// $sum=$sum+$re;
+					echo $re;
+					?>৳</p>
+				<a href="delete.php?ID=<?php echo $info['ID'];?>" type="submit" class="btn btn-warning radious mt-1 mb-4">Cancel</a>
+			</div><?php } ?>
+			<?php } ?>
 		</div>
 
 	</section>
@@ -71,7 +134,7 @@
 			<div class="row" style="padding-bottom: 50px;">
 
 				<div class="col-lg-3 col-sm-12 col-12 coronawar">
-					<h3>Corona<span>War</span></h3>
+					<a href="doctor.php"><h3>Corona<span>War</span></h3></a>
 					<p>This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis.</p>
 				</div>
 				<div class="offset-lg-1 col-lg-1 offset-md-2 col-md-1 offset-sm-2  col-sm-2 offset-1 col-5 f_contact">
