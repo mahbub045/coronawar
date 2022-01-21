@@ -127,13 +127,37 @@ if (isset($_POST['login_btn'])) {
 	<title>Corona War|Login</title>
 </head>
 <body>
+	<!-- header start -->
+	<header class="fixed-top">
+		<div class="container">
+			<!-- navbar start -->
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand l_img" href="index.php">
+					<img class="img-fluid" src="images/logo.png" alt="logo">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse menu" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.php">Home</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- navbar end -->
+		</div>
+	</header>
+	<!-- header end -->
+	<!-- login start -->
 	<section class="container">
 		<div class="row offset-4 col-md-4 pb-3 card bg-countom centered">
-			<div class="col-md-12 mt-2 text-center">
-				<a class="btn btn-success border-secondary" href="index.php">Home</a>
-			</div>
+		<div class="row col-md-3 pl-4 mt-2 offset-4   text-center c_h6">
+					<h6>Login</h3>
+				</div>
 			<div class="col-md-12 ">
-				<form class=" " action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+				<form class="mt-3" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<label class="row r_color1 c_font pl-1" for="up_email">Email:</label>
 					<input class="row col-md-11 pl-2 radious" type="email" name="up_email" id="up_email" placeholder="Enter valid Email Address" required>
 
@@ -144,16 +168,71 @@ if (isset($_POST['login_btn'])) {
 						<input class="mt-1 " type="checkbox" name="keep_login" id="keep_login">Keep Me Logged in
 					</label>
 
-					<input class="btn btn-secondary offset-5 mt-2 radious text-center" type="submit" name="login_btn" value="Login">	
+					<input class=" btn_color offset-5 mt-0 radious text-center" type="submit" name="login_btn" value="Login">	
 				</form>
-				<a href="register.php" class="offset-4"><input class="btn btn-info ml-4 radious mt-2 text-center" type="submit" name="register" value="Register"></a>
+				<a href="register.php" class="offset-4"><input class="btn_color ml-4 radious mt-2 text-center" type="submit" name="register" value="Register"></a>
 			</div>
  			<div class="ml-5 c_font">
 				<?php echo $notify; ?>
 			</div>
 		</div>
 	</section>
-	
+	<!-- login end -->
+	<!-- footer start -->
+	<footer>
+		<div class="container">
+			<div class="row" style="padding-bottom: 50px;">
+
+				<div class="col-lg-3 col-sm-12 col-12 coronawar">
+					<h3>Corona<span>War</span></h3>
+					<p>This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis.</p>
+				</div>
+				<div class="offset-lg-1 col-lg-1 offset-md-2 col-md-1 offset-sm-2  col-sm-2 offset-1 col-5 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#prenention">Prevention</a></li>
+						<li><a href="#blog">Blog</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-md-1 col-md-1 offset-md-1 col-md-1 offset-sm-0 col-sm-2 offset-1 col-4 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#faq">Faq</a></li>
+						<li><a href="#">Check Symptoms</a></li>
+						<li><a href="index.php">Experts</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-lg-1 col-lg-2 offset-md-1 col-md-3 offset-sm-0  col-sm-3 offset-1 col-5 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="index.php">Live Report</a></li>
+						<li><a href="index.php">Todays Death</a></li>
+						<li><a href="index.php">Total Recovered</a></li>
+						<li><a href="index.php">Todays Effected</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-lg-0 col-lg-1 offset-md-0 col-md-2 offset-sm-0  col-sm-2 offset-1  col-4 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Youtube</a></li>
+						<li><a href="#">Linked In</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="row designed">
+				<div class="col-12">
+					<h2>Designed by <a href="#" target="_blank">CoronaWar Team</a></h2>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer end -->
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

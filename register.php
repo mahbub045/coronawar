@@ -69,61 +69,139 @@ if (isset($_POST['add_info'])) {
 	<title>Corona War|Register</title>
 </head>
 <body>
+		<!-- header start -->
+		<header class="fixed-top">
+		<div class="container">
+			<!-- navbar start -->
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand l_img" href="index.php">
+					<img class="img-fluid" src="images/logo.png" alt="logo">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse menu" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.php">Home</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- navbar end -->
+		</div>
+	</header>
+	<!-- header end -->
 	<section class="container">
 		<div class="row">
-			<div class="col-md-5 offset-2 mt-5 card bg-countom centered">
-				<div class="col-md-12  text-center mt-2">
-					<a href="index.php" type="submit" class="btn btn_color">Home</a>
+			<div class="col-md-4 offset-1 mt-5 card bg-countom centered">
+				<div class="row col-md-4 offset-4 pl-4 mt-2  text-center c_h6">
+					<h6>Register</h3>
 				</div>
-				<form action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
-					<div class="form-group c_font">
-						<label for="InputName">Full Name:</label>
-						<input type="name" class="form-control radious" id="InputName" name="InputName" placeholder="Enter Your Full Name" required>
+				<form class="ml-3 mt-0" action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
+					<div class="mt-2 c_font">
+						<label class="row r_color1 c_font pl-1" for="InputName">Full Name:</label>
+						<input type="name" class="row col-md-9 pl-2 radious" id="InputName" name="InputName" placeholder="Enter Your Full Name" required>
 					</div>
-					<div class="form-group c_font">
-						<label for="InputEmail">Email address:</label>
-						<input type="email" class="form-control col-md-10 radious" id="InputEmail" name="InputEmail" placeholder="Enter Valid Email Address" required>
+					<div class="mt-2 c_font">
+						<label class="row r_color1 c_font pl-1" for="InputEmail">Email address:</label>
+						<input type="email" class="row col-md-9 pl-2 radious" id="InputEmail" name="InputEmail" placeholder="Enter Valid Email Address" required>
 					</div>
-					<div class="form-group c_font">
-						<label for="Inputtype">Experience:</label>
-						<input type="name" class="form-control col-md-10 radious" id="Inputtype" name="Inputtype" placeholder="Enter experience if you are a Doctor">
+					<div class="mt-2 c_font">
+						<label class="row r_color1 c_font pl-1" for="Inputtype">Experience:</label>
+						<input type="name" class="row col-md-8 pl-2 radious" id="Inputtype" name="Inputtype" placeholder="Enter experience if you are a Doctor">
 					</div>
-					<div class="form-group c_font">
-						<label for="InputPassword">Password:</label>
-						<input type="password" class="form-control col-md-8 radious" name="InputPassword" id="InputPassword" placeholder="Enter A Strong Password" required>
+					<div class="mt-2 c_font">
+						<label class="row r_color1 c_font pl-1" for="InputPassword">Password:</label>
+						<input type="password" class="row col-md-5 pl-2 radious" name="InputPassword" id="InputPassword" placeholder="Enter A Strong Password" required>
 					</div>
-					<div class="form-group c_font">
-						<label for="InputC_Password">Confirm Password:</label>
-						<input type="password" class="form-control col-md-8 radious" name="InputC_Password" id="InputC_Password" placeholder="Re-type Password" required>
+					<div class="mt-2 c_font">
+						<label class="row r_color1 c_font pl-1" for="InputC_Password">Confirm Password:</label>
+						<input type="password" class="row col-md-5 pl-2 radious" name="InputC_Password" id="InputC_Password" placeholder="Re-type Password" required>
 					</div>
-					<div class="form-check c_font">
-						<input class="form-check-input" type="radio" name="reg_doc" id="reg_doc" value="option1">
-						<label class="form-check-label" for="reg_doc">
+					<div class="mt-3 c_font">
+						<input class=" mt-2" type="radio" name="reg_doc" id="reg_doc" value="option1">
+						<label class="r_color1 c_font pl-0" class="form-check-label" for="reg_doc">
 							Register as Doctor
 						</label>
 					</div>
-					<div class="form-check c_font">
-						<input class="form-check-input" type="radio" name="reg_pat" id="reg_pat" value="option2">
-						<label class="form-check-label" for="reg_pat">
+					<div class=" c_font">
+						<input class=" mt-2" type="radio" name="reg_pat" id="reg_pat" value="option2">
+						<label class="r_color1 c_font pl-0" class="form-check-label" for="reg_pat">
 							Register as Patient
 						</label>
 					</div>
-					<button type="submit" name="add_info" class="btn btn-warning radious">Submit</button>
-
+					<div class="text-center">
+						<button type="submit" name="add_info" class=" btn_color radious ">Submit</button>
+					</div>
 					<div class="h6 mt-3 rounded bg-warning text-danger font-weight-bold col-md-10">
 						 <?php echo $ntfy;?> 
 					</div>
-
 					<div class="h6 mt-3 rounded bg-warning text-danger font-weight-bold col-md-6">
 						 <?php echo $result;?> 
 					</div>
 				</form>
-				<h5 class="c_font">Already have an account?<a type="submit" class="btn btn_color ml-3" href="login.php">Login here.</a></h5>
-
+				<div class="text-center a_btn">
+					<h5 class="c_font">Already have an account?<a type="submit" class="ml-1" href="login.php">Login here.</a></h5>
+				</div>
 			</div>
 		</div>
 	</section>
-	
+	<!-- footer start -->
+	<footer>
+		<div class="container">
+			<div class="row" style="padding-bottom: 50px;">
+
+				<div class="col-lg-3 col-sm-12 col-12 coronawar">
+					<h3>Corona<span>War</span></h3>
+					<p>This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis.</p>
+				</div>
+				<div class="offset-lg-1 col-lg-1 offset-md-2 col-md-1 offset-sm-2  col-sm-2 offset-1 col-5 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#prenention">Prevention</a></li>
+						<li><a href="#blog">Blog</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-md-1 col-md-1 offset-md-1 col-md-1 offset-sm-0 col-sm-2 offset-1 col-4 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#faq">Faq</a></li>
+						<li><a href="#">Check Symptoms</a></li>
+						<li><a href="index.php">Experts</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-lg-1 col-lg-2 offset-md-1 col-md-3 offset-sm-0  col-sm-3 offset-1 col-5 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="index.php">Live Report</a></li>
+						<li><a href="index.php">Todays Death</a></li>
+						<li><a href="index.php">Total Recovered</a></li>
+						<li><a href="index.php">Todays Effected</a></li>
+					</ul>
+				</div>
+
+				<div class="offset-lg-0 col-lg-1 offset-md-0 col-md-2 offset-sm-0  col-sm-2 offset-1  col-4 f_contact">
+					<ul class="list-unstyled">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Youtube</a></li>
+						<li><a href="#">Linked In</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="row designed">
+				<div class="col-12">
+					<h2>Designed by <a href="#" target="_blank">CoronaWar Team</a></h2>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer end -->
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

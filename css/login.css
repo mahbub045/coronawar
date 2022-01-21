@@ -1,34 +1,111 @@
-body{
-	font-family: 'Roboto', sans-serif; 
+html {
+  scroll-behavior: smooth;
 }
-section{
-	background-image: url("../images/bannerimg.png");
-	height: 635px;
+body {
+  font-family: "Roboto", sans-serif;
 }
-.bg-countom{
-	background-color: #0f414ce8
+/*header start*/
+header {
+  background-color: #f2f1fd;
+}
+.menu ul li a {
+  font-size: 14px;
+  color: #080746 !important;
+  padding: 0 20px !important;
+  transition: 1s;
+}
+.menu ul li a:hover {
+  color: #fea71a !important;
+}
+/*header end*/
+section {
+  background-image: url("../images/bannerimg.png");
+  height: 513px;
+  margin-top: 120px;
+}
+.bg-countom {
+  background-color: #0f414ce8;
+}
+.c_h6 h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #dfdfdf;
 }
 .centered {
-	position: absolute;
-    top: 25%;
-    left: 50.5%;
-    transform: translate(-150%, 0%);
+  position: absolute;
+  top: 30%;
+  left: 75.63%;
+  transform: translate(-150%, 0%);
 }
-.btn_color{
-	color: #FEA71A;
-	border: solid 1px;
-	border-radius: 20px;
-	transition: 1s;
+.btn_color {
+  color: #6057ee;
+  font-size: 14px !important;
+  padding: 2px 14px 2px 15px;
+  border: solid 0px;
+  border-radius: 20px;
+  transition: 1s;
 }
-.btn_color:hover{
-	background-color: #FEE68F;
+.btn_color:hover {
+  background-color: #fea71a;
 }
-.c_font{
-	font-weight: 500;
-	font-size: 16px;
-	color: #FEA71A;
+.c_font {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fea71a;
+}
+.radious {
+  border-radius: 15px;
+}
 
+/*footer start*/
+footer {
+  background-color: #6c69b0;
+  padding-top: 50px;
 }
-.radious{
-	border-radius: 15px;
+.coronawar {
 }
+.coronawar h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #ffffff;
+}
+.coronawar h3 span {
+  color: #fea71a;
+}
+.coronawar p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+}
+.f_contact ul li a {
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 1s;
+}
+.f_contact ul li a:hover {
+  color: #fea71a;
+}
+.designed {
+  background-color: #5a56af;
+  padding: 20px 0 5px 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.designed h2 {
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+.designed h2 a {
+  color: #fea71a;
+  text-decoration: none;
+  transition: 1s;
+}
+.designed h2 a:hover {
+  color: #ffffff;
+}
+/*footer end*/
