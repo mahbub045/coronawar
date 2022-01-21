@@ -13,12 +13,13 @@ if (isset($_SESSION['auth'])) {
 	}else {
 		header("location:login.php");
 	}
+
 }
 ?>
+
 <?php 
 include("dataconfig.php");
 $p_name=isset($_SESSION['username'])?$_SESSION['username']:"";
-$d_name=isset($_SESSION['username'])?$_SESSION['username']:"";
 
 $selectsql2="SELECT * FROM visit";
 
@@ -34,6 +35,7 @@ $a=150;
 $v=500;
 $sum=0;
 $re=0;
+
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +79,9 @@ $re=0;
 						</li>
 						<li class="nav-item border rounded-pill border-warning float-left">
 							<a class="nav-link" href="logout.php">Logout</a>
+						</li>
+						<li class="nav-item border rounded-pill border-warning float-left ml-3"> 
+							<a class="nav-link" href="doctorEditProfile.php" >Edit Profile</a>
 						</li>
 						<li class="nav-item float-left">
 							<a class="nav-link" href="#">
@@ -134,7 +139,7 @@ $re=0;
 			<div class="row" style="padding-bottom: 50px;">
 
 				<div class="col-lg-3 col-sm-12 col-12 coronawar">
-					<a href="doctor.php"><h3>Corona<span>War</span></h3></a>
+					<h3>Corona<span>War</span></h3>
 					<p>This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis.</p>
 				</div>
 				<div class="offset-lg-1 col-lg-1 offset-md-2 col-md-1 offset-sm-2  col-sm-2 offset-1 col-5 f_contact">
@@ -177,7 +182,7 @@ $re=0;
 			</div>
 			<div class="row designed">
 				<div class="col-12">
-					<h2>Designed by <a href="#" target="_blank">CoronaWar Team</a></h2>
+					<h2>Designed by <a href="#" target="_blank">Corona War Team</a></h2>
 				</div>
 			</div>
 		</div>
