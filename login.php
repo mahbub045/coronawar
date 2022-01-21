@@ -12,6 +12,12 @@ else if (isset($_SESSION['auth3'])) {
 		header("location:patient.php");
 	}
 }
+else if (isset($_SESSION['auth5'])) {
+	if ($_SESSION['auth5']==1) {
+		header("location:admin.php");
+	}
+}
+
 else if (isset($_COOKIE['auth2'])) {
 	if ($_COOKIE['auth2']==true) {
 		header("location:doctor.php");
@@ -22,6 +28,12 @@ else if (isset($_COOKIE['auth4'])) {
 		header("location:patient.php");
 	}
 }
+else if (isset($_COOKIE['auth6'])) {
+	if ($_COOKIE['auth6']==true) {
+		header("location:admin.php");
+	}
+}
+
 
 
 include "dataconfig.php";
@@ -34,9 +46,13 @@ if (isset($_POST['login_btn'])) {
 
  	$loginQuery_d="SELECT * FROM doctors WHERE email='$email' AND pass='$pass' ";
  	$loginQuery_p="SELECT * FROM patients WHERE email='$email' AND pass='$pass' ";
+ 	$loginQuery_ad="SELECT * FROM admins WHERE email='$email' AND pass='$pass' ";
+	
 
  	$resultLogin_d=$conn-> query($loginQuery_d);
  	$resultLogin_p=$conn-> query($loginQuery_p);
+ 	$resultLogin_ad=$conn-> query($loginQuery_ad);
+	
 
  	if  ($resultLogin_d-> num_rows>0) {
 
@@ -65,6 +81,20 @@ if (isset($_POST['login_btn'])) {
  		}
  		header("location:patient.php");
  	}
+ 	else if ($resultLogin_ad-> num_rows>0) {
+
+ 		while ($result=$resultLogin_ad->fetch_assoc()) {
+ 		    $username=$result['NAME'];
+ 		}
+ 		$_SESSION['username']=$username;
+
+ 		$_SESSION['auth5']=1;
+ 		if ($loggdin==1) {
+ 			setcookie('auth6', true, time()+(60*60*24*15),'/');
+ 		}
+ 		header("location:admin.php");
+ 	}
+
  	else{
  		$notify="Invalid Email or Password. IF You are new User. Please! Register.";
 
@@ -99,8 +129,8 @@ if (isset($_POST['login_btn'])) {
 <body>
 	<section class="container">
 		<div class="row offset-4 col-md-4 pb-3 card bg-countom centered">
-			<div class="col-md-12  text-center mt-3">
-				<a href="index.php" type="submit" class="btn btn_color">Home</a>
+			<div class="col-md-12 mt-2 text-center">
+				<a class="btn btn-success border-secondary" href="index.php">Home</a>
 			</div>
 			<div class="col-md-12 ">
 				<form class=" " action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

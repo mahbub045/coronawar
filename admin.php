@@ -1,4 +1,22 @@
 <?php
+session_start();
+if (isset($_SESSION['auth5'])) {
+	if ($_SESSION['auth5']!=1) {
+		header("location:login.php");
+	}
+}else{
+	if (isset($_COOKIE['auth6'])) {
+		if ($_COOKIE['auth6']!=true) {
+			header("location:login.php"); 
+		}
+
+	}else {
+		header("location:login.php");
+	}
+
+}
+?>
+<?php
 include('dataconfig.php');
 if(isset($_POST['Cases']) && isset($_POST['Recovered']) && isset($_POST['Deaths']))
 {
@@ -22,19 +40,19 @@ else if(isset($_POST['Cases_bd']) && isset($_POST['Recovered_bd']) && isset($_PO
 	mysqli_query($conn,$sql);
 }
 
-else if(isset($_POST['wash_hand']) && isset($_POST['use_mask']) && isset($_POST['use_sanaitizer']) && isset($_POST['avoid_handshake']) && isset($_POST['avoid_touch']) && isset($_POST['doctor_appointment'])){
-	$wash_hand=$_POST['wash_hand'];
-	$use_mask=$_POST['use_mask'];
-	$use_sanaitizer=$_POST['use_sanaitizer'];
-	$avoid_handshake=$_POST['avoid_handshake'];
-	$avoid_touch=$_POST['avoid_touch'];
-	$doctor_appointment=$_POST['doctor_appointment'];
+// else if(isset($_POST['wash_hand']) && isset($_POST['use_mask']) && isset($_POST['use_sanaitizer']) && isset($_POST['avoid_handshake']) && isset($_POST['avoid_touch']) && isset($_POST['doctor_appointment'])){
+// 	$wash_hand=$_POST['wash_hand'];
+// 	$use_mask=$_POST['use_mask'];
+// 	$use_sanaitizer=$_POST['use_sanaitizer'];
+// 	$avoid_handshake=$_POST['avoid_handshake'];
+// 	$avoid_touch=$_POST['avoid_touch'];
+// 	$doctor_appointment=$_POST['doctor_appointment'];
 
-	$sql="INSERT INTO prevents (WASH_HAND,USE_MASK,USE_SANITIZER,AVOID_HANDSHAKE,AVOID_TOUCH,D_APPOINTMENT) VALUES ('$wash_hand','$use_mask','$use_sanaitizer','$avoid_handshake','$avoid_touch','$doctor_appointment')";
-	mysqli_query($conn,$sql);
-}
-
+// 	$sql="INSERT INTO prevents (WASH_HAND,USE_MASK,USE_SANITIZER,AVOID_HANDSHAKE,AVOID_TOUCH,D_APPOINTMENT) VALUES ('$wash_hand','$use_mask','$use_sanaitizer','$avoid_handshake','$avoid_touch','$doctor_appointment')";
+// 	mysqli_query($conn,$sql);
+// }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
