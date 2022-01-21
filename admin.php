@@ -16,6 +16,37 @@ if (isset($_SESSION['auth5'])) {
 
 }
 ?>
+
+<?php
+  include('dataconfig.php');
+
+  $sql_w = "SELECT * FROM info_world ORDER BY id DESC LIMIT 1";
+
+  $sql_bd = "SELECT * FROM info_bd ORDER BY id DESC LIMIT 1";
+
+  $sql_prevn = "SELECT * FROM prevents ORDER BY id DESC LIMIT 1";
+
+  $result_w = mysqli_query($conn,$sql_w);
+
+  $result_bd = mysqli_query($conn,$sql_bd);
+
+  if($result_w)
+  {
+    $data = mysqli_fetch_assoc($result_w);
+    $cases_world = $data['cases'];
+    $recovered_world = $data['recovered'];
+    $deaths_world = $data['deaths'];
+  }
+
+  if($result_bd)
+  {
+    $data = mysqli_fetch_assoc($result_bd);
+    $cases_bd = $data['cases'];
+    $recovered_bd = $data['recovered'];
+    $deaths_bd = $data['deaths'];
+  }  
+?>
+
 <?php
 include('dataconfig.php');
 if(isset($_POST['Cases']) && isset($_POST['Recovered']) && isset($_POST['Deaths']))
@@ -122,16 +153,16 @@ else if(isset($_POST['Cases_bd']) && isset($_POST['Recovered_bd']) && isset($_PO
 						<div class="col-md-12 text-center mt-2 mb-2">
 							<form action="admin.php" method="POST" onsubmit="myFunctions()">
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Total Cases:</label>
-									<input class="coustom_margin1" type="text" name="Cases">		
+									<label for="" class="t_color">Enter Total Cases:</label>
+									<input class="coustom_margin1" type="text" name="Cases" value="<?php echo $cases_world; ?>">		
 								</div>
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Recovered:</label>
-									<input class="coustom_margin2" type="text" name="Recovered">
+									<label for="" class="t_color">Enter Recovered:</label>
+									<input class="coustom_margin2" type="text" name="Recovered" value="<?php echo $recovered_world; ?>">
 								</div>
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Total Deaths:</label>
-									<input class="coustom_margin3" type="text" name="Deaths">
+									<label for="" class="t_color">Enter Total Deaths:</label>
+									<input class="coustom_margin3" type="text" name="Deaths" value="<?php echo $deaths_world; ?>">
 								</div>
 								<div class="text-center">
 									<input class="btn btn-warning radious" type="submit" value="submit">
@@ -148,16 +179,16 @@ else if(isset($_POST['Cases_bd']) && isset($_POST['Recovered_bd']) && isset($_PO
 						<div class="col-md-12 text-center mt-2 mb-2">
 							<form action="admin.php" method="POST" onsubmit="myFunctions()">
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Total Cases:</label>
-									<input class="coustom_margin1" type="text" name="Cases_bd">		
+									<label for="" class="t_color">Enter Total Cases:</label>
+									<input class="coustom_margin1" type="text" name="Cases_bd" value="<?php echo $cases_bd; ?>">		
 								</div>
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Recovered:</label>
-									<input class="coustom_margin2" type="text" name="Recovered_bd">
+									<label for="" class="t_color">Enter Recovered:</label>
+									<input class="coustom_margin2" type="text" name="Recovered_bd" value="<?php echo $recovered_bd; ?>">
 								</div>
 								<div class="mb-3 col-md-12">
-									<label for="" class="">Enter Total Deaths:</label>
-									<input class="coustom_margin3" type="text" name="Deaths_bd">
+									<label for="" class="t_color">Enter Total Deaths:</label>
+									<input class="coustom_margin3" type="text" name="Deaths_bd" value="<?php echo $deaths_bd; ?>">
 								</div>
 								<div class="text-center">
 									<input class="btn btn-warning radious" type="submit" value="submit">

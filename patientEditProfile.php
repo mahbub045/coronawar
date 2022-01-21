@@ -35,7 +35,7 @@ if (isset($_POST['add_info'])) {
 
   else{
     $insertSql=" UPDATE patients SET NAME='$name', EMAIL='$email' WHERE ID='$ID' ";
-    $upSql_D_name=" UPDATE visit SET P_NAME='$name' WHERE P_NAME='$name' ";
+    $upSql_P_name=" UPDATE visit SET P_NAME='$name' WHERE P_NAME='$name' ";
 
     if ($conn-> query($insertSql) && ($conn->query($upSql_P_name))) {
       header("location:logout.php");
