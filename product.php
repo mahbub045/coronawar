@@ -66,7 +66,7 @@ $result_doc = $conn->query($selectsql);
 			<!-- navbar end -->
 		</div>
 	</header>
-	<!-- cases start -->
+	<!-- product start -->
 	<section class="custom_padding">
 		<div class="container">
 			<table class="styled-table">
@@ -92,14 +92,12 @@ $result_doc = $conn->query($selectsql);
 						echo "<td>". '<form method="post" action="product_checkout.php"> <input type="hidden" name = "P_ID" id="ID" value = '.$id.' ><input type= "submit" class="button-3" value = "Buy"> </form>'. "</td>";
 						echo "</tr>";
 					}
-
-
 					?>
 				</tbody>
 			</table>
 		</div>
 	</section>
-	<!-- cases end -->
+	<!-- product end -->
 	<!-- footer start -->
 	<footer>
 		<div class="container">
