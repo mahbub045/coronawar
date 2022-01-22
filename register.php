@@ -98,7 +98,7 @@ if (isset($_POST['add_info'])) {
 				<div class="row col-md-4 offset-4 pl-4 mt-2  text-center c_h6">
 					<h6>Register</h3>
 				</div>
-				<form class="ml-3 mt-0" action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
+				<form class="ml-3" action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
 					<div class="mt-2 c_font">
 						<label class="row r_color1 c_font pl-1" for="InputName">Full Name:</label>
 						<input type="name" class="row col-md-9 pl-2 radious" id="InputName" name="InputName" placeholder="Enter Your Full Name" required>

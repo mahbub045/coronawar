@@ -157,7 +157,7 @@ if (isset($_POST['login_btn'])) {
 					<h6>Login</h3>
 				</div>
 			<div class="col-md-12 ">
-				<form class="mt-3" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+				<form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<label class="row r_color1 c_font pl-1" for="up_email">Email:</label>
 					<input class="row col-md-11 pl-2 radious" type="email" name="up_email" id="up_email" placeholder="Enter valid Email Address" required>
 
