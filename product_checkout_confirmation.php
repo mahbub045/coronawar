@@ -47,16 +47,6 @@ $Address = $_POST["address"];
 						<li class="nav-item active">
 							<a class="nav-link" href="index.php">Home</a>
 						</li>
-						<li class="nav-item border rounded-pill border-warning float-left">
-							<a class="nav-link" href="logout.php">Logout</a>
-						</li>
-						<li class="nav-item float-left">
-							<a class="nav-link" href="#">
-								<?php
-								echo isset($_SESSION['username']) ? $_SESSION['username'] : "";
-								?>
-							</a>
-						</li>
 					</ul>
 				</div>
 			</nav>
