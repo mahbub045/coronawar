@@ -81,10 +81,10 @@
 			      <li class="nav-item">
               <a class="nav-link" href="product.php">Shop</a>
             </li>
-            <li class="nav-item border rounded-pill border-warning float-left mr-2">
+            <li class="nav-item border rounded-pill border-warning float-left mr-lg-2 mr-sm-0 mr-0">
               <a class="nav-link" href="register.php">Register</a>
             </li>
-            <li class="nav-item border rounded-pill border-warning float-left">
+            <li class="nav-item border rounded-pill border-warning float-left mt-lg-0 mt-md-1 mt-1">
               <a class="nav-link" href="login.php">Login→</a>
             </li>
           </ul>
@@ -121,23 +121,25 @@
   <!-- counter start for whole world-->
   <section id="counter">
     <div class="container">
-      <div class="row symptoms_text offset-md-3">
-        <h1>Total cases of Whole World</h1>
+      <div class="row symptoms_text">
+        <div class="col text-center">
+          <h1>Total cases of Whole World</h1>
+        </div>
       </div>
       <div class="row text-center">
-        <div class="col counter">
+        <div class="col-sm-4 col-12 counter">
           <div class=" c_border">
             <h2 class="timer count-title count-number" data-to=<?php echo $cases_world; ?>></h2>
             <p class="count-text ">Total Confirmed</p>
           </div>
         </div>
-        <div class="col counter">
+        <div class="col-sm-4 col-12 counter">
          <div class=" c_border">
           <h2 class="timer count-title count-number" data-to=<?php echo $recovered_world; ?>></h2>
           <p class="count-text ">Total Recoverd</p>
         </div>
       </div>
-      <div class="col counter">
+      <div class="col-sm-4 col-12 counter">
         <div class=" c_border">
           <h2 class="timer count-title count-number" data-to=<?php echo $deaths_world; ?>></h2>
           <p class="count-text ">Total Death</p>
@@ -149,23 +151,25 @@
   <!-- counter start for Bangladesh-->
   <section id="counter">
     <div class="container">
-      <div class="row symptoms_text offset-md-3">
-        <h1>Total cases of Bangladesh</h1>
+      <div class="row symptoms_text">
+        <div class="col text-center">
+          <h1>Total cases of Bangladesh</h1>
+        </div>
       </div>
       <div class="row text-center">
-        <div class="col counter">
-          <div class=" c_border">
+        <div class="col-sm-4 col-12 counter">
+          <div class=" c_border d-block">
             <h2 class="timer count-title count-number" data-to=<?php echo $cases_bd; ?>></h2>
             <p class="count-text ">Total Confirmed</p>
           </div>
         </div>
-        <div class="col counter">
+        <div class="col-sm-4 col-12 counter">
          <div class=" c_border">
           <h2 class="timer count-title count-number" data-to=<?php echo $recovered_bd; ?>></h2>
           <p class="count-text ">Total Recoverd</p>
         </div>
       </div>
-      <div class="col counter">
+      <div class="col-sm-4 col-12 counter">
         <div class=" c_border">
           <h2 class="timer count-title count-number" data-to=<?php echo $deaths_bd; ?>></h2>
           <p class="count-text ">Total Death</p>

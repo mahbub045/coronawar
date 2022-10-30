@@ -25,12 +25,7 @@ section {
 }
 .bg-countom {
   background-color: #0f414ce8;
-}
-.centered {
-  position: absolute;
-  top: 10%;
-  left: 75.63%;
-  transform: translate(-150%, 0%);
+  margin-bottom: 10px;
 }
 .c_h6 h6 {
   font-weight: 700;

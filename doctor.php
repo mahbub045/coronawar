@@ -80,7 +80,7 @@ $re=0;
 						<li class="nav-item border rounded-pill border-warning float-left">
 							<a class="nav-link" href="logout.php">Logout</a>
 						</li>
-						<li class="nav-item border rounded-pill border-warning float-left ml-3"> 
+						<li class="nav-item border rounded-pill border-warning float-left ml-lg-2 mt-lg-0 mt-1"> 
 							<a class="nav-link" href="doctorEditProfile.php" >Edit Profile</a>
 						</li>
 						<li class="nav-item float-left">
@@ -100,12 +100,14 @@ $re=0;
 	<!-- information start -->
 	<section class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<h1 class="offset-lg-3 col-lg-6 offset-md-3 col-md-8 text-center meet_title custom_h1">Information</h1>
+			<div class="col-md-12 text-center">
+				<h1 class="meet_title custom_h1">Information</h1>
 			</div>
+		</div>
+		<div class="row">
 			<?php while ($info=$result_info->fetch_assoc()) {?>
 				<?php if ($p_name==$info['D_NAME']) { ?>
-			<div class="col-md-3 offset-1 mb-3  meet_content text-center c_padding">
+			<div class="col-3 meet_content text-center c_padding_margin">
 				<h3 class="custom_h3">Patient Name:</h3>
 				<p class="custom_p"><?php echo $info['P_NAME'];?></p>
 				<h5 class="custom_h3">Service Type:</h5>

@@ -5,7 +5,7 @@
 		width: 70%;
 	}
 	.menu ul li a {
-		text-align: right;
+		text-align: center;
 		padding-right: 0 !important;
 	}
 	/*header end*/
@@ -172,7 +172,11 @@
 		margin-top: -250px;
 	}
 	/*particles*/
-
+	/*doctor.php start*/
+	.c_padding_margin{
+		margin: 20px 22px 20px 65px !important;
+	}
+	/*doctor.php end*/
 	
 }
 
@@ -180,7 +184,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
 	/*header start*/
 	.menu ul li a {
-		text-align: right;
+		text-align: center;
 		padding-right: 0 !important;
 	}
 	/*header end*/
@@ -281,6 +285,11 @@
 	    margin-top: -380px;
 	}
 	/*particles*/
+	/*doctor.php start*/
+	.c_padding_margin{
+		margin: 20px 22px 20px 65px !important;
+	}
+	/*doctor.php end*/
 
 }
 
@@ -288,7 +297,7 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
 	/*header start*/
 	.menu ul li a {
-		text-align: right;
+		text-align: center;
 		padding-right: 0 !important;
 	}
 	/*header end*/
@@ -387,6 +396,11 @@
 	    margin-top: -380px;
 	}
 	/*particles*/
+	/*doctor.php start*/
+	.c_padding_margin{
+		margin: 20px 22px 20px 65px !important;
+	}
+	/*doctor.php end*/
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -417,10 +431,20 @@
 		transform: translate(65%, 200%);
 	}
 	/*symptoms start*/
+	/*doctor.php start*/
+	.c_padding_margin{
+		margin: 20px 22px 20px 65px !important;
+	}
+	/*doctor.php end*/
 
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+	/*doctor.php start*/
+	.c_padding_margin{
+		margin: 20px 22px 20px 65px !important;
+	}
+	/*doctor.php end*/
 
 }

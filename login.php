@@ -152,11 +152,9 @@ if (isset($_POST['login_btn'])) {
 	<!-- header end -->
 	<!-- login start -->
 	<section class="container">
-		<div class="row offset-4 col-md-4 pb-3 card bg-countom centered">
-		<div class="row col-md-3 pl-4 mt-2 offset-4   text-center c_h6">
-					<h6>Login</h3>
-				</div>
-			<div class="col-md-12 ">
+		<div class="row">
+			<div class="offset-xl-3 offset-md-2 offset-1 col-xl-5 col-md-8 col-10 mt-5 pt-2 pb-2 card bg-countom text-center">
+				<h6 class="text-center c_h6">Login</h6>
 				<form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<label class="row r_color1 c_font pl-1" for="up_email">Email:</label>
 					<input class="row col-md-11 pl-2 radious" type="email" name="up_email" id="up_email" placeholder="Enter valid Email Address" required>
@@ -168,13 +166,14 @@ if (isset($_POST['login_btn'])) {
 						<input class="mt-1 " type="checkbox" name="keep_login" id="keep_login">Keep Me Logged in
 					</label>
 
-					<input class=" btn_color offset-5 mt-0 radious text-center" type="submit" name="login_btn" value="Login">	
+					<input class=" btn_color mt-0 ml-4 radious text-center" type="submit" name="login_btn" value="Login">	
 				</form>
-				<a href="register.php" class="offset-4"><input class="btn_color ml-4 radious mt-2 text-center" type="submit" name="register" value="Register"></a>
+				<a href="register.php" class=""><input class="btn_color ml-4 radious mt-2 text-center" type="submit" name="register" value="Register"></a>
 			</div>
- 			<div class="ml-5 c_font">
+			<div class="ml-5 c_font">
 				<?php echo $notify; ?>
 			</div>
+		</div>
 		</div>
 	</section>
 	<!-- login end -->

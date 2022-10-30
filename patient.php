@@ -123,7 +123,7 @@ $sum=0;
     <div class="container">
       <!-- 1st row start -->
       <div class="row">
-        <div class="offset-lg-3 col-lg-6 offset-md-3 col-md-8 text-center meet_title">
+        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-9 col-12 text-center meet_title">
           <h1 class="custom_h1">Choose Your Dector and Service Type</h1>
         </div>
       </div>
@@ -146,8 +146,8 @@ $sum=0;
         <!-- 3rd row start -->
         <div class="row">
           <!-- 1st col start -->
-          <div class="offset-1 col-md-5 col-12 text-center service_content">
-            <div class="mt-5">
+          <div class="col-md-5 col-12 text-center service_content">
+            <div class="mt-2">
               <h3>Our service Types</h3>
             </div>
             <div>
@@ -158,16 +158,16 @@ $sum=0;
           </div>
           <!-- 1st col end -->
           <!-- 2nd col start -->
-          <div class="offset-1 col-md-5 col-12 text-center service_content">
+          <div class="offset-md-2 col-md-5 col-12 text-center service_content">
             <div class="mt-2">
               <h3>Enter the Doctor Name & Your Service Type</h3>
             </div>
             <div>
               <form action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
-                <input type="name" class="offset-3 form-control col-md-6 mt-2 c_form_control" name="dd_name" id="dd_name" aria-describedby="dd_name" placeholder="Enter Doctor Name" required>
+                <input type="name" class="offset-3 form-control col-md-6 col-6 mt-2 c_form_control" name="dd_name" id="dd_name" aria-describedby="dd_name" placeholder="Enter Doctor Name" required>
                 <!-- <input type="name" class="offset-3 form-control col-md-6 mt-2 mb-1 c_form_control" name="test_type" id="test_type" aria-describedby="test_type" placeholder="Enter Service" required> -->
 
-                <div class="offset-2 col-md-7 mt-2">
+                <div class="offset-2 col-md-7 col-6 mt-2">
                   <select name="test_type" id="test_type" class="custom-select ml-3 c_form_control">
                     <option selected>Select Service</option>
                     <option value="Corona Test">Corona Test</option>
@@ -222,7 +222,7 @@ $sum=0;
               </div><?php } ?>
               <?php } ?>
             </div>
-            <div class="offset-4 mb-3 col-md-4 text-center p_list">
+            <div class="offset-md-4 mb-3 col-md-5 text-center p_list">
               <h4 class="offset-lg-3 mt-3 col-lg-6 offset-md-3 col-md-8  meet_title custom_h4">Total cost</h4>
               <p class="custom_p"><?php echo $sum; ?>৳</p>
             </div>

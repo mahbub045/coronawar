@@ -94,10 +94,8 @@ if (isset($_POST['add_info'])) {
 	<!-- header end -->
 	<section class="container">
 		<div class="row">
-			<div class="col-md-4 offset-1 mt-5 card bg-countom centered">
-				<div class="row col-md-4 offset-4 pl-4 mt-2  text-center c_h6">
-					<h6>Register</h3>
-				</div>
+			<div class="offset-xl-3 offset-md-3 offset-1 col-xl-5 col-md-6 col-10 card bg-countom ">
+				<h6 class="mt-2  text-center c_h6">Register</h6>
 				<form class="ml-3" action=" <?php echo $_SERVER['PHP_SELF'];?> " method="post">
 					<div class="mt-2 c_font">
 						<label class="row r_color1 c_font pl-1" for="InputName">Full Name:</label>

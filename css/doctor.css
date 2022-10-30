@@ -13,8 +13,9 @@ body{
 }
 /*header end*/
 /*informatio start*/
-.c_padding{
+.c_padding_margin{
 	padding-top: 25px;
+	margin: 20px 22px 20px 65px !important;
 }
 .meet_content{
 	background-color: #ffffff;
